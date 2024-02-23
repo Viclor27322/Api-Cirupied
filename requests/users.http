@@ -1,0 +1,93 @@
+@api = http://localhost:3001/api/users
+{{api}} 
+
+
+###agregar usuario
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "Nombre" : "Victor",
+    "Correo": "20210704@uthh.edu.mx",
+    "Password": "password1",
+    "Telefono": "7891198958"
+}
+
+
+###
+POST http://localhost:3001/api/send-email/
+Content-Type: application/json
+
+{
+    "Correo": "vito27322@gmail.com"
+}
+
+
+
+###
+POST  http://localhost:3001/api/users/reset-password/
+Content-Type: application/json
+{
+    "Correo": "vito27322@gmail.com",
+    "Password": "12344"
+}
+
+###
+GET http://localhost:3001/api/emailExist/vito27322@gmail.com
+
+### add a product
+POST http://localhost:3001/api/products
+Content-Type: application/json
+
+{
+    "name": "product 2",
+   "description": "some product",
+   "quantity": 10
+}
+
+### get product
+{{api}}/2
+
+###extraer
+
+
+POST http://localhost:3001/api/users/login
+Content-Type: application/json
+
+{
+    "Correo": "vito27322@gmail.com",
+    "Password": "password1"
+}
+
+
+
+#hola
+
+
+
+
+### delete product 
+DELETE {{api}}/6
+
+### get count
+{{api}}/count
+
+### update
+PUT {{api}}/5
+Content-Type: application/json
+
+{
+    "name": "laptop",
+    "description": "some laptop",
+    "quantity": 20
+}
+
+###
+POST  http://localhost:3001/api/users/reset-password/
+Content-Type: application/json
+
+{
+    "Correo": "vito27322@gmail.com",
+    "Password": "12345"
+}

@@ -1,0 +1,31 @@
+@api = http://localhost:3001/api/users
+{{api}}
+
+### add a product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "product 2",
+   "description": "some product",
+   "quantity": 10
+}
+
+### get product
+{{api}}/5
+
+### delete product 
+DELETE {{api}}/6
+
+### get count
+{{api}}/count
+
+### update
+PUT {{api}}/5
+Content-Type: application/json
+
+{
+    "name": "laptop",
+    "description": "some laptop",
+    "quantity": 20
+}
