@@ -11,19 +11,20 @@ export const sendRecoveryEmail = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'sportgymcenterinfo@gmail.com',
-        pass: 'faol swhy ktje sibg',
+        user: 'cirupiedinfo@gmail.com',
+        pass: 'efnd nsjt hpbw wzel',
       },
     });
     const resetLink = `http://localhost:3000/reset-password/${Token}`; // Corregido aquí
 
     // Opciones del correo
     const mailOptions = {
-      from: 'sportgymcenterinfo@gmail.com',
+      from: 'cirupiedinfo@gmail.com',
       to: Correo, // Corregido aquí
-      subject: 'Recuperacion Recuperación',
+      subject: 'Recuperacion contraseña',
       html: `
-        Haz clic en el siguiente enlace para restablecer tu contraseña: <a class="btn btn-primary" href="${resetLink}">${resetLink}</a>
+        Haz clic en el siguiente enlace para restablecer tu contraseña: <a class="btn btn-primary" href="${resetLink}">Restaurar</a>
+        Si tú no has intentado recuperar la contraseña ignora este correo
       `,
     };
 
@@ -48,8 +49,8 @@ export const sendLogin = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'sportgymcenterinfo@gmail.com',
-        pass: 'faol swhy ktje sibg',
+        user: 'cirupiedinfo@gmail.com',
+        pass: 'efnd nsjt hpbw wzel',
       },
     });
 

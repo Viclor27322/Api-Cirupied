@@ -10,7 +10,8 @@ import {
   login,
   getEmailExist,
   resetPassword,
-  cambiarHabilitado
+  cambiarHabilitado,
+  bloquear
 } from "../controllers/users.controller"; // Asegúrate de importar los controladores de usuarios
 
 const router =  Router();
@@ -36,6 +37,8 @@ router.post("/users/login", login);
 router.post("/users/reset-password", resetPassword);
 
 router.post("/users/resert-Habilitado", cambiarHabilitado );
+
+router.post("/users/bloquearCuenta", bloquear);
 
 
 export default router;
